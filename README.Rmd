@@ -46,11 +46,20 @@ Neighborhood: House location
 2. Is there a variable of special interest?
 Yes, "Sale Price"
 
+3. Sale Price Exploration
 
+Range: 0 - 20,500,000
 
-
-
-
+```{r}
+summary(ames$ 'Sale Price')
+library(ggplot2)
+ggplot(ames, aes(x = `Sale Price`)) + 
+  geom_histogram(binwidth = 100000, color = "white", fill = "blue") + 
+  labs(title = "House Sale Prices in Ames",
+       x = "Sale Price ($)",
+       y = "Number of times")
+```
+The histogram is heavily right skewed with many extreme outliers.
 
 
 
