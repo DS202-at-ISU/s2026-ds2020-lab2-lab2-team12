@@ -66,11 +66,12 @@ The histogram is heavily right skewed with many extreme outliers.
 summary(ames$ 'Acres')
 library(ggplot2)
 ggplot(ames, aes(x = `Acres`)) + 
-  geom_histogram(binwidth = .05, color = "white", fill = "blue") + 
+  geom_histogram(binwidth = .08, color = "white", fill = "blue") + 
   labs(title = "Acre lot size in Ames",
        x = "Acres",
        y = "Number")
 ```
+Range 0-12
 The pattern for the histogram is right skewed with some extreme outliers. This pattern is very similar to the main variable Sale Price in its right skew shape.
 
 ```{r}
