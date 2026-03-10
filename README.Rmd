@@ -81,3 +81,28 @@ ggplot(ames, aes(x = Acres, y = `Sale Price`)) +
        y = "Sale Price ($)")
 ```
 On this graph I noticed, similar to the histograms, a large density of points in the bottom left around the origin. This is a weak-positive relationship with many outliers. It seems that generally higher priced homes have more acreage, but some oddities are the houses with high acreage but low price and vice-versa.
+
+4.TotalLivingArea (Blake)
+
+```{r}
+summary(ames$ 'TotalLivingArea (sf)')
+library(ggplot2)
+ggplot(ames, aes(x = `TotalLivingArea (sf)`)) + 
+  geom_histogram(binwidth = 500, color = "white", fill = "blue") + 
+  labs(title = "House Living Area Ames",
+       x = "Living Area (sqft)",
+       y = "Number of homes")
+```
+Range: 0-6007
+The data is very slightly right skewed 
+
+```{r}
+ggplot(ames, aes(x = `TotalLivingArea (sf)`, y = `Sale Price`)) +
+  geom_point(alpha = 0.3, color = "blue") + xlim(0, 6000) + ylim(0, 2000000)
+  labs(title = "Relationship: Living Area vs. Sale Price",
+       x = "Living Area (sqft)",
+       y = "Sale Price ($)")
+```
+
+There is a strong positive relationship between TotalLivingArea (sf) and Sale Price of the homes in Ames. There are many outliers in this data set so they had to be removed.
+
