@@ -22,3 +22,36 @@ Submit a link to your repository on Canvas (only one submission per team) to sig
 library(classdata)
 head(ames)
 ```
+1. What variables are there?
+
+There are 16 total variables for each house 
+
+Parcel ID: House mailing number? unique 10 digit number 
+Address: House address 
+Style: Building style (1 Story Frame, 2 Story Frame, etc.)
+Occupancy: Type of housing (Single-Family/Owner Occupied, Condominium, Townhouse, etc.)
+Sale Date: Date the house was sold (date in yyyy-mm-dd)
+Sale Price: Sale price of house ($)
+Multi Sale: N/A or Y
+YearBuilt: Year  of construction
+Acres: Land
+TotalLivingArea: House squarefootage (0-4000?)
+Bedrooms: (NA - 8)
+FinishedBsmtArea: Extra sqft if basement finished (NA - 2000)
+LotArea: sqft of lot (NA - 200000)
+AC: House air conditioned (Yes / No)
+Fireplace: (Y / N)
+Neighborhood: House location
+
+2. Is there a variable of special interest?
+Yes, "Sale Price"
+
+
+
+
+
+
+
+
+
+
