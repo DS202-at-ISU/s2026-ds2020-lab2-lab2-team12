@@ -160,10 +160,10 @@ The data is very slightly right skewed
 
 ``` r
 ggplot(ames, aes(x = `TotalLivingArea (sf)`, y = `Sale Price`)) +
-  geom_point(alpha = 0.3, color = "blue") + xlim(0, 6000) + ylim(0, 2000000)
+  geom_point(alpha = 0.3, color = "blue") + xlim(1, 6000) + ylim(1, 2000000)
 ```
 
-    ## Warning: Removed 780 rows containing missing values or values outside the scale range
+    ## Warning: Removed 2980 rows containing missing values or values outside the scale range
     ## (`geom_point()`).
 
 ![](README_files/figure-gfm/unnamed-chunk-6-1.png)<!-- -->
