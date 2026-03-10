@@ -61,8 +61,23 @@ ggplot(ames, aes(x = `Sale Price`)) +
 ```
 The histogram is heavily right skewed with many extreme outliers.
 
+4. Acres (Will):
+```{r}
+summary(ames$ 'Acres')
+library(ggplot2)
+ggplot(ames, aes(x = `Acres`)) + 
+  geom_histogram(binwidth = .05, color = "white", fill = "blue") + 
+  labs(title = "Acre lot size in Ames",
+       x = "Acres",
+       y = "Number")
+```
+The pattern for the histogram is right skewed with some extreme outliers. This pattern is very similar to the main variable Sale Price in its right skew shape.
 
-
-
-
-
+```{r}
+ggplot(ames, aes(x = Acres, y = `Sale Price`)) +
+  geom_point(alpha = 0.3)  + xlim(0, 5) + ylim(0, 1000000) +
+  labs(title = "Relationship Between Lot Size and Sale Price",
+       x = "Acres",
+       y = "Sale Price ($)")
+```
+On this graph I noticed, similar to the histograms, a large density of points in the bottom left around the origin. This is a weak-positive relationship with many outliers. It seems that generally higher priced homes have more acreage, but some oddities are the houses with high acreage but low price and vice-versa.
